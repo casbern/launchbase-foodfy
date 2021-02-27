@@ -1,0 +1,54 @@
+{% extends "admin/common/layout.njk" %}
+
+{% block head %}
+  <title>Bem vindo {{user.name}}</title>
+  <link rel="stylesheet" href="/admin/users.css">
+{% endblock %}
+
+{% block content %}
+
+<form action="/admin/users?_method=PUT" method="POST"> 
+<input type="hidden" name="id" value='{{user.id}}'>
+
+<h3>Bem vindo {{user.name}}</h3>
+
+<button type="submit" class="btn btn-save">Salvar</button>
+
+<div class="user-container">
+  <div class="item">
+    <h4>Nome</h4>
+    <input 
+      id="name" 
+      type="text" 
+      name="name" 
+      value="{{user.name}}"
+      >
+  </div>
+
+  <div class="item">
+    <h4>Email</h4>
+    <input 
+      id="email" 
+      type="text" 
+      name="email"
+      value="{{user.email}}"
+      onblur="Validate.apply(this,'isEmail')"
+      >
+  </div>
+
+  <div class="item">
+    <h4>Senha</h4>
+    <input 
+      id="password" 
+      type="password" 
+      name="password"
+      placeholder="Digite sua senha"
+      >
+  </div>
+</div>
+
+</form>
+
+<script src="/admin/scripts.js"></script>
+
+{% endblock %}

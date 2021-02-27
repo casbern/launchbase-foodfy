@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+  {% block head %}
+    <title>Foodfy</title>
+  {% endblock %}
+  <link rel="stylesheet" href="/common/common.css">
+  <link rel="stylesheet" href="/admin/common.css">
+  <link rel="stylesheet" href="/admin/users.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    {%include "../parts/messages.njk"%}
+    
+    <header>
+      <div class="wrapper-header">
+
+      <div class="logo">
+        <a href="/"><img src="/admin/img/logo-white.png" alt="Logo Foodfy"></a>
+      </div>
+
+      <div class="links">
+        <a id="recipes" href="/admin/recipes">Receitas</a>
+        <a id="chefs" href="/admin/chefs">Chefs</a>
+        <a id="users" href="/admin/users">Usuários</a>
+      </div>
+
+      {% if session.userId %} 
+      <form action="/users/logout" method="post">
+        <button class="logout" type="submit">SAIR</button>
+      </form>
+      {% endif %}
+
+      </div>
+    </header>
+
+  <div class="wrapper">
+
+    {% block content %}{% endblock %}
+
+  </div> 
+
+  <script src="/common/links.js"></script>
+
+</body> 
+</html>

@@ -1,0 +1,51 @@
+{% extends "./header.njk" %}
+
+{% block head %}
+  <title>Iniciar Sessão</title>
+  <link rel="stylesheet" href="/admin/users.css">
+  <link rel="stylesheet" href="/admin/session.css">
+{% endblock %}
+
+{% block content %}
+
+<h3>Inciar Sessão</h3>
+
+<form action="/users/login" method="POST">
+  <div class="item">
+    <h4>Email</h4>
+    <input  
+      class="{{inputClass}}"
+      id="email" 
+      type="text" 
+      name="email"
+      placeholder="Digite o seu email"
+      value="{{user.email}}"
+      onblur="Validate.apply(this, 'isEmail')"
+      >
+  </div>
+
+  <div class="item">
+    <h4>Senha</h4>
+    <input 
+      class="{{inputClass}}"
+      id="password" 
+      type="password" 
+      name="password"
+      placeholder="Digite sua senha"
+      >
+  </div>
+
+  <div class="links">
+    
+    <a href="/users/forgot-password">Perdeu a senha?</a>
+    
+      <button type="submit" class="btn btn-submit">Acessar</button>
+    </form>
+
+  </div>
+</div>
+
+
+<script src="/admin/scripts.js"></script>
+
+{% endblock %}

@@ -1,0 +1,130 @@
+button.btn-cancel {
+  background-color: #8A8A8A;
+}
+
+div.user-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.user-container div.item input {
+  width: 450px;
+}
+
+div.user-container div.item:first-child{
+  margin-right: 40px;
+}
+
+div.is-admin-checkbox {
+  display: flex;
+  align-items: baseline;
+  padding-top: 10px;
+}
+
+div.is-admin-checkbox input {
+  width: 15px;
+  height: auto;
+  margin-right: 10px;
+}
+
+div.is-admin-checkbox p {
+  font-weight: 600;
+}
+
+/* VALIDATE ERRORS */
+div.user-container input {
+  margin-bottom: 0;
+}
+
+div.error {
+  background-color: #DC4747;
+  padding: 4px;
+  border-radius: 4px;
+  color: white;
+}
+
+/* MESSAGES */
+@keyframes hidemessage {
+  to {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+.messages {
+  display: flex;
+  justify-content: center;
+  padding: 50px 40px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 25%;
+  color: white;
+  pointer-events: none;
+
+  opacity: 1;
+  animation: hidemessage 400ms 5s ease-out forwards;
+}
+
+.messages.error-message {
+  background-color: #DC4747;
+  border: 1px solid #DDDDDD; ;
+  border-radius: 4px;
+}
+
+.messages.success-message {
+  background-color: #22B12B;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+}
+
+/* ALL USERS LIST */
+.btn.btn-new {
+  background-color: #7159C1;
+}
+
+.btn.btn-new a {
+  color: white;
+}
+
+.wrapper-users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.users {
+  margin-bottom: 50px;
+}
+
+.users p.user-name {
+  font-size: 1.12rem;
+}
+
+.users p.user-email {
+  font-size: 0.87rem;
+  color: #777777;
+  padding-top: 4px;
+}
+
+.user-links {
+  padding-top: 16px;
+  font-size: 0.87rem;
+  font-weight: bold;
+  display: flex;
+}
+
+.user-links a:first-child {
+  margin-right: 16px;
+  color: #7166C8;
+}
+
+.user-links a:last-child {
+  color: #DC4747;
+}
+
+/* LOGOUT */
+button.logout {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}

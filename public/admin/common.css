@@ -1,0 +1,277 @@
+/* HEADER */
+header {
+  background-color: var(--color-black);
+}
+
+header .wrapper-header {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+}
+
+header .links a {
+  color: white;
+}
+
+/* CREATE */
+.wrapper {
+  margin-top: 55px;
+}
+
+.wrapper h3 {
+  font-size: 1.5rem;
+  line-height: 34px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.wrapper input, textarea, select {
+  display: block;
+  border: 1px solid var(--color-border);
+  background: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  color: var(--color-darker-grey);
+  outline: none;
+  padding-left: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.wrapper select {
+  cursor: pointer;
+}
+
+.wrapper textarea {
+  padding: 10px;
+  height: 300px;
+  width: 100%;
+  line-height: 32px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper input::placeholder {
+  font-size: 0.88rem; 
+}
+
+.wrapper .item {
+  margin-bottom: 15px;  
+}
+
+.wrapper h4 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: var(--color-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+.add-ingredient, .add-step{
+  color: var(--color-purple);
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  background-color: initial;
+}
+
+.btn {
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 26px;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  float: right;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-save, .btn-edit {
+  background-color: var(--color-purple);
+}
+
+.btn-delete {
+  background-color: var(--color-red);
+}
+
+.btn-save {
+  margin-right: 10px;
+}
+
+/* SHOW - RECIPE CARDS */
+.wrapper-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  margin-bottom: 5px;
+  line-height: 26px;
+}
+
+.wrapper .card-avatar {
+  border-radius: 8px;
+  width: 172px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.wrapper p.card-main-title {
+  font-weight: 400;
+  font-size: 1.13rem;
+  margin-bottom: 5px;
+  line-height: initial;
+}
+
+.wrapper p.card-author {
+  font-weight: 400;
+  font-size: 0.88rem;
+  margin-bottom: 5px;
+  color: var(--color-dark-grey);
+  line-height: initial;
+}
+
+.card-info {
+  margin-left: 20px;
+}
+
+.card-info a {
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--color-purple);
+}
+
+/* PHOTOS UPLOAD */
+#photos {
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+}
+
+form .item #photos-upload {
+  position: relative; 
+  display: block;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #DDDDDD;
+  margin-right: 15px;
+}
+
+form .item #photos-upload i {
+  border-radius: 4px;
+  font-size: 40px;
+  color: #777777;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+form .item #photos-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+form .item #photos-preview {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 8px;
+  width: 150px;
+  height: 150px;
+  margin: 8px 0;
+}
+
+form .item #photos-preview img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#photos-preview .photo {
+  position: relative;
+}
+
+#photos-preview .photo i {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: rgba(255,255,255,0.8);
+
+  color: red;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 500%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+#photos-preview .photo:hover i { 
+  opacity: 1;
+}
+
+/* CHEF PHOTO INPUT */
+form .item #chef-photo-upload {
+  position: relative; 
+  display: block;
+  overflow: hidden;
+  width: 139px;
+  height: 37px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  color: white;
+  background-color: #6558C3;
+}
+
+form .item #chef-photo-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+form .item #chef-photo-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#fixed-path {
+  color: #cbcbcb;
+}
+

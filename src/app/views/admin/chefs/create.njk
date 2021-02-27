@@ -1,0 +1,36 @@
+{% extends "admin/common/layout.njk" %}
+
+{% block head %}
+  <title>Crie novo chef - Admin Foodfy</title>
+  <link rel="stylesheet" href="/admin/common.css">
+{% endblock %}
+
+{% block content %}
+
+<form action="/admin/chefs" method="POST" enctype="multipart/form-data">
+
+<h3>Criando chef</h3>
+
+<button type="submit" class="btn btn-save">Salvar chef</button>
+
+<div class="item">
+<h4>Nome</h4>
+<input type="text" name="name">
+</div>
+ 
+<div class="item">
+<h4>Avatar</h4>
+<div id='chef-photo-upload'>
+  <input 
+    id="chef-photo-input"
+    type="file" 
+    name="avatar"
+    accept="image/*" 
+    >
+  <div id="chef-photo-label">Enviar avatar</div>
+</div> 
+</div>
+
+
+</form>
+{% endblock %}

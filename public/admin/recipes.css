@@ -1,0 +1,23 @@
+/* SHOW */
+
+.wrapper .list-ingredients ul, .list-steps ul {
+  font-size: 1.13rem;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--color-darker-grey);
+  list-style-type: "- ";
+  list-style-position: inside;
+}
+
+.wrapper p {
+  font-size: 1.13rem;
+  font-weight: 400;
+  color: var(--color-darker-grey);
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 50px;
+} 
+
+
+
+

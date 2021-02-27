@@ -1,0 +1,51 @@
+{% extends "admin/common/layout.njk" %}
+
+{% block head %}
+  <title>Criar usuário</title>
+  <link rel="stylesheet" href="/admin/users.css">
+{% endblock %}
+
+{% block content %}
+
+<form action="/admin/users" method="POST"> 
+
+<h3>Criar Usuário</h3>
+
+<button type="submit" class="btn btn-cancel">Cancelar</button>
+<button type="submit" class="btn btn-save">Salvar</button>
+
+<div class="user-container">
+  <div class="item">
+    <h4>Nome</h4>
+    <input 
+      id="name" 
+      type="text" 
+      name="name" 
+      value="{{user.name}}"
+      placeholder="Digite o nome completo"
+      >
+  </div>
+
+  <div class="item">
+    <h4>Email</h4>
+    <input 
+      id="email" 
+      type="text" 
+      name="email"
+      value="{{user.email}}"
+      placeholder="Digite o seu email"
+      onblur="Validate.apply(this,'isEmail')"
+      >
+  </div>
+</div>
+
+<div class="is-admin-checkbox">
+  <input type="checkbox" name="is_admin" id="is_admin">
+  <p>Administrador</p>
+</div>
+
+</form>
+
+<script src="/admin/scripts.js"></script>
+
+{% endblock %}
