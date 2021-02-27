@@ -7,8 +7,8 @@ const userProfile = require('./app/controllers/admin/userProfile.js')
 const session = require('./app/controllers/admin/session.js')
 const main = require('./app/controllers/main.js')
 
-const userValidator = require('./app/Validators/user.js')
-const sessionValidator = require('./app/Validators/session.js')
+const userValidator = require('./app/validators/user.js')
+const sessionValidator = require('./app/validators/session.js')
 
 const { redirectToLogin } = require('./app/middlewares/session.js')
 const { isLoggedRedirectToUsers } = require('./app/middlewares/session.js')

@@ -1,9 +1,9 @@
 const {Pool} = require('pg')
 
 module.exports = new Pool ({
-  user: "cassiabernardo",
+  user: "foodfyuser",
   password: "",
   host: "localhost",
   port: 5432,
-  database: "launchbase-foodfy"
+  database: "launchbase_foodfy"
 })

@@ -7,7 +7,7 @@ FOODFY
 </h1>
 
 <p align="center">
-This is a recipe app in which the administrator of the website will give you access to add new chefs and recipes to it.
+This is a recipe web app in which the administrator of the website will give you access to add new chefs and recipes to it.
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@ This is a recipe app in which the administrator of the website will give you acc
   </a>
 </p>
 
-## Features
+## Tech Stack
 
 This app uses these main tools:
 
@@ -27,7 +27,8 @@ This app uses these main tools:
 - **Postgres**
 ## Getting started
 
-After cloning the repository, change the directory to the folder. Ex:
+After cloning the repository, change the directory to the folder. 
+Ex:
 
 ```
 cd launchbase-foodfy
@@ -35,9 +36,27 @@ cd launchbase-foodfy
 
 Use the package manager [npm](https://https://www.npmjs.com/) to install all the needed dependencies.
 
-```bash
+```
 npm install 
 ```
+If you do not have Postgres, you will need to install it and connect to your database server with a tool like Postbird.
+
+Next step, you need to create the database by executing this SQL statement:
+
+````
+CREATE DATABASE launchbase_foodfy
+````
+
+Copy all the contents of the file ***arquivo.sql*** that is inside the ***sql*** folder.
+
+Then, select the created database on Postgres, paste the code there and execute it.
+
+Create a database user that will have full access to our database, change the password with a new one.
+
+````
+create user foodfyuser with encrypted password 'mypass';
+grant all privileges on database launchbase_foodfy to foodfyuser;
+````
 
 
 
