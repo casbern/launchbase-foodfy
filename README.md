@@ -1,12 +1,14 @@
 <h1 align="center">
 <br>
-  <img src="YOUR_LOGO_URL" alt="YOUR_PROJECT_NAME" width="120">
+  <img src="README/print.png" alt="foodfy front page" width="120">
 <br>
 <br>
 FOODFY
 </h1>
 
-<p align="center">A little description about your project</p>
+<p align="center">
+This is a recipe app in which the administrator of the website will give you access to add new chefs and recipes to it.
+</p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -15,16 +17,30 @@ FOODFY
 </p>
 
 ## Features
-[//]: # (Add the features of your project here:)
-This app features all the latest tools and practices in mobile development!
 
-- ⚛️ **React Js** — A JavaScript library for building user interfaces
-- ⚛️ **React Native** — A lib that provides a way to create native apps for Android and iOS
-- 💹 **Node Js** — A web framework for Node Js
+This app uses these main tools:
 
+- **HTML**
+- **CSS**
+- **Node Js** 
+- **Express**
+- **Postgres**
 ## Getting started
 
-Describe here the way to use/install your project
+After cloning the repository, change the directory to the folder. Ex:
+
+```
+cd launchbase-foodfy
+```
+
+Use the package manager [npm](https://https://www.npmjs.com/) to install all the needed dependencies.
+
+```bash
+npm install 
+```
+
+
+
 
 
 ## License
