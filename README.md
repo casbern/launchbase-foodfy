@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="README/print.png" alt="foodfy front page" width="400">
+  <img src="README/print.png" alt="foodfy front page" width="650">
 <br>
 <br>
 FOODFY
