@@ -58,9 +58,13 @@ Copy all the contents of the file ***arquivo.sql*** that is inside the ***sql***
 
 Then, select the created database on Postgres, paste the code in the Query tab and execute it.
 
-# Seeds
+Then, in the terminal run this command in the project folder to populate the database with sample data.
 
-To finally run the this application, you should do:
+````
+node seeds.js
+````
+
+Finally run this application with:
 
 ````
 npm start

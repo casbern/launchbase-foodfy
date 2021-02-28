@@ -45,8 +45,17 @@ module.exports = {
       ) VALUES ($1, $2, $3, $4)
       RETURNING id
     `
-    //CREATE A PASSWORD
-     const password = generatePassword(8,false) //create in another module utils
+    let password
+    if ('password' in data) {
+      
+      password = data.password
+
+    } else {
+
+      //CREATE A PASSWORD
+      password = generatePassword(8,false) //create in another module utils
+    }
+    
 
     //HASH OF PASSWORD
     const passwordHash = await hash(password, 8)
