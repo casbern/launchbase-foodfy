@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="README/print.png" alt="foodfy front page" width="650">
+  <img src="readme-screenshot.png" alt="foodfy front page" width="650">
 <br>
 <br>
 FOODFY
@@ -22,7 +22,7 @@ This app uses these main tools:
 
 - **HTML**
 - **CSS**
-- **Node Js** 
+- **Node.js** 
 - **Express**
 - **Postgres**
 ## Getting started
@@ -46,22 +46,25 @@ Next step, you need to create the database by executing this SQL statement:
 ````
 CREATE DATABASE launchbase_foodfy
 ````
-
-Copy all the contents of the file ***arquivo.sql*** that is inside the ***sql*** folder.
-
-Then, select the created database on Postgres, paste the code there and execute it.
-
 Create a database user that will have full access to our database, change the password with a new one.
 
 ````
 create user foodfyuser with encrypted password 'mypass';
 grant all privileges on database launchbase_foodfy to foodfyuser;
 ````
+Connect to Postbird using the ***foodfyuser*** username with its password and select the database **launchbase_foodfy**
 
+Copy all the contents of the file ***arquivo.sql*** that is inside the ***sql*** folder of the project.
 
+Then, select the created database on Postgres, paste the code in the Query tab and execute it.
 
+# Seeds
 
+To finally run the this application, you should do:
 
+````
+npm start
+````
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
