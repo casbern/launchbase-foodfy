@@ -9,4 +9,5 @@ module.exports = new Pool ({
   ssl: {
     rejectUnauthorized: false
   }
+
 })
