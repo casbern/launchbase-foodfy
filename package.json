@@ -1,11 +1,11 @@
 {
   "name": "desafio-foody-with-node",
   "version": "1.0.0",
-  "main": "web.js",
-  "engines": {
-    "node": "14.x"
+  "scripts": {
+    "start": "node src/server.js",
+    "nodemon": "nodemon ./src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:8080 --files 'public, ./src/app/views'"
   },
-  
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-pg-simple": "^6.2.1",
