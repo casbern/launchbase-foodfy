@@ -5,5 +5,8 @@ module.exports = new Pool ({
   password: process.env.DB_PASSWORD || "foodifymypass",
   host: process.env.DB_HOST || "localhost",
   port: 5432,
-  database: process.env.DB_DATABASE || "foodify"
+  database: process.env.DB_DATABASE || "foodify",
+  ssl: {
+    rejectUnauthorized: false
+  }
 })
