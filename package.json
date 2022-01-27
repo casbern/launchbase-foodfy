@@ -1,7 +1,10 @@
 {
   "name": "desafio-foody-with-node",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "web.js",
+  "engines": {
+    "node": "14.x"
+  },
   
   "dependencies": {
     "bcryptjs": "^2.4.3",
