@@ -1,6 +1,7 @@
 {
   "name": "desafio-foody-with-node",
   "version": "1.0.0",
+  
   "scripts": {
     "start": "node src/server.js",
     "nodemon": "nodemon ./src/server.js",
